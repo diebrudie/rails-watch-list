@@ -1,0 +1,5 @@
+<h1><%= @list.name %></h1>
+
+<%= link_to '🎥', lists_path %>
+<%#= link_to '+', new_list_bookmark_path %>
+<%= render 'bookmarks/new', list: @list %>
