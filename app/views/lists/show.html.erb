@@ -2,4 +2,15 @@
 
 <%= link_to '🎥', lists_path %>
 <%#= link_to '+', new_list_bookmark_path %>
-<%= render 'bookmarks/new', list: @list %>
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+    <h3>Add a movie to your <%= @list.name %></h3>
+      <%= simple_form_for [@list, @bookmark] do |l| %>
+        <%= l.input :comment, placeholder: "add soemthing" %>
+        <%= l.association :movie %>
+        <%= l.submit :submit, class: 'btn btn-primary mt-3'%>
+      <% end %>
+    </div>
+  </div>
+</div>
