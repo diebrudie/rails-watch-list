@@ -1,6 +1,5 @@
 class ListsController < ApplicationController
-  before_action :find_resto, only: %i[show edit]
-  # before_action :new_resto, only: %i[new create]
+  before_action :find_list, only: %i[show edit destroy]
 
   def index
     @lists = List.all
@@ -22,9 +21,14 @@ class ListsController < ApplicationController
 
   def edit; end
 
+  def destroy
+    @list.destroy
+    redirect_to lists_path, status: :see_other
+  end
+
   private
 
-  def find_resto
+  def find_list
     @list = List.find(params[:id])
   end
 
