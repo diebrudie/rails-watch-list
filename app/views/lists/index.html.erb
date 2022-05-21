@@ -11,8 +11,8 @@
   </div>
 
   <div class="row">
-    <% @lists.each do |list| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3">
+    <% @lists.each do |list| %>
         <%= link_to list_path(list), class:"text-decoration-none" do %>
           <div class="card-category position-relative">
           <%= cl_image_tag list.photo.key, class: "img-contain" %>
