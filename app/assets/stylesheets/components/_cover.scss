@@ -1,8 +1,31 @@
 .cover {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/assets/cover-86cda6d….jpg);
-  height: 500px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://images.unsplash.com/photo-1432139523732-e9d8af332501");
+  height: 35vh;
   width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.absolute-contain{
+  display: block;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.img-contain{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.86));
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  width: 100%;
+  height: 100%;
 }
